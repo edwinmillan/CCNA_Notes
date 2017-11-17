@@ -25,8 +25,8 @@ content: '''
   | 9    | 512      | 510               |
   | 10   | 1024     | 1022              |
   
-  ![55-octet-values-subnet-masks.jpg](/:storage/fm0lacrtsjjrlik9.jpg)
-  ![IPv4-Subnetting.png](/:storage/u1458t82e8h93sor.png)
+  ![Binary and Bits with Mask](/:storage/f66nb2n9t9gdgqfr.jpg)
+  ![IPv4 Subnetting](/:storage/symbxlf3n523ayvi.png)
   
   Problem:
   10.0.50.0/24 Needs 11 Networks, Needs 8 
@@ -82,4 +82,4 @@ tags: [
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:15.070Z"
-updatedAt: "2017-11-17T20:58:15.070Z"
+updatedAt: "2017-11-17T21:21:22.647Z"
