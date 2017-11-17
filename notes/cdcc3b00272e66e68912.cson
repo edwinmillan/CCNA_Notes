@@ -58,8 +58,11 @@ content: '''
   copy running-config startup-config
   ```
 '''
-tags: []
+tags: [
+  "Routers"
+  "IOS"
+]
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:30.147Z"
-updatedAt: "2017-11-17T20:58:30.147Z"
+updatedAt: "2017-11-17T21:15:49.319Z"

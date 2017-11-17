@@ -36,8 +36,10 @@ content: '''
   show version
   ```
 '''
-tags: []
+tags: [
+  "IOS"
+]
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:32.032Z"
-updatedAt: "2017-11-17T20:58:32.032Z"
+updatedAt: "2017-11-17T21:15:03.853Z"

@@ -13,8 +13,10 @@ content: '''
   `no ip domain-lookup` (Turns off DNS lookup for unknown commands)
   
 '''
-tags: []
+tags: [
+  "IOS"
+]
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:33.929Z"
-updatedAt: "2017-11-17T20:58:33.929Z"
+updatedAt: "2017-11-17T21:14:58.237Z"

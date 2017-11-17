@@ -110,8 +110,11 @@ content: '''
   reload
   ```
 '''
-tags: []
+tags: [
+  "#Routers"
+  "IOS"
+]
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:23.833Z"
-updatedAt: "2017-11-17T20:58:23.833Z"
+updatedAt: "2017-11-17T21:15:45.675Z"
