@@ -1,0 +1,101 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "IPv6 Addressing"
+content: '''
+  # IPv6 Addressing
+  
+  ## Fundamentals
+  **Bit:** 
+  - 1 or a 0
+  
+  **Nibble: 4 bits**
+  - 1010
+  - Hex: 0xA
+  
+  **Byte (Octet): 8 bits**
+  - 11001001
+  - Hex: 0xC9
+  
+  **Hextet: 16 bits**
+  - 10101010 01000110
+  - Hex: 0xAA46
+  
+  ## Recap of IPv4 Structure
+  32 bits long = 4 octets
+  Decimal: 192.167.10.10
+  Binary: 11000000 1010100 00001010 00001010
+  
+  ## IPv6 Structure
+  128 bits long = 32 nibbles = 8 hextets
+  2001:0DB8:0002:008D:0000:0000:00A5:52F5
+  
+  Network Portion 64 Bits
+  **2001:0DB8:0002:008D**
+  
+  Interface Identifier 64 Bits
+  *0000:0000:00A5:52F5*
+  
+  Can be shortened by reducing leading 0's
+  2001:0DB8:0002:008D:0000:0000:00A5:52F5 becomes 2001:DB8:2:8D:0:0:A5:52F5 or 2001:DB8:2:8D::A5:52F5 (Double colon :: represents multiple 0's)
+  
+  **Note**: Double colons can only be used *once* in the IPv6 address
+  
+  ## Global Communication
+  IPv6 Unicast Address needed to communicate across global comms.
+  
+  ## Local Communications
+  2 IPv6 addresses needed for Local Communications.
+  2nd IPv6 address is called IPv6 Link Local Address (It is unicast). Doesn't traverse a router, similar to MAC Address despite it being L3 address. 
+  
+  | Name               | Example                                                                                 |
+  |--------------------|-----------------------------------------------------------------------------------------|
+  | Loopback Address   | ::1                                                                                     |
+  | Link-Local Address | FE80::/10                                                                               |
+  | Site-Local address | FEC0::/10 (but it is deprecated and replaced with FC00::/7 for use in private networks) |
+  | Global address     | 2000::/3                                                                                |
+  | Multicast address  | FF00::/8                                                                                |
+  
+  **Link Local Address:** 
+  - FE80::/10
+  
+  **Loopback Address:**
+  - ::1/128
+  
+  **Documentation Address:**
+  - 2001:DB8::/32
+  
+  **Unspecified Address:**
+  - ::/128
+  
+  **Unique Local:**
+  - FC00::/7
+  - "Private" Addressing, no NAT
+  
+  **Multicast Address:**
+  - One to many communication
+  - Not implemented globally (As of 6/2016)
+  
+  **Anycast Address:**
+  - One IPv6 address shared by many devices
+  - Used for load balancing
+  
+  ## IPv6 Address Acquisition
+  SLACC: **S**tate**l**ess **A**ddress **A**uto-**c**onfiguration
+  
+  Windows: Takes last 64 bits, randomizes it
+  Unix: Mac Address Split and filled.
+  1. Mac Address: 000C:29FC:70A5
+  2. Split: 000C:29 | FC:70A5
+  3. Fill with (FF:FE): 000C:29:FF:FE:FC:70A5
+  4. Convert 7th Bit to it's inverse: 0x**00**0C -> 0000 00**0**0... -> 0000 00**1**0... -> 0x**02**0C
+  5. 020C:29:FF:FE:FC:70A5
+  
+'''
+tags: [
+  "IPv6"
+  "Addressing"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:13.097Z"
+updatedAt: "2017-11-17T20:58:13.097Z"

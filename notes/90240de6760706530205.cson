@@ -1,0 +1,61 @@
+type: "MARKDOWN_NOTE"
+folder: "71faee7512a1a7742253"
+title: "Physical Layer"
+content: '''
+  # Physical Layer
+  
+  ## Wiring
+  - Unshielded Twisted Pair (UTP)
+  - Shielded Twisted Pair (STP)
+  - Coaxial
+  - Serial
+  - Proprietary
+  
+  ## Twisted Pair
+  | Category | Example Uses              |
+  |:--------:|---------------------------|
+  |     1    | Doorbell                  |
+  |     2    | Token Ring                |
+  |     3    | Telephone/10Mbps Ethernet |
+  |     4    | Token Ring                |
+  |     5    | 100Mb Ethernet            |
+  |    5e    | Gigabit Ethernet          |
+  |     6    | Gigabit Ethernet          |
+  
+  
+  ## RJ-45 
+  Wiring Standards
+  EIA/TIA-568-A
+  EIA/TIA-568-B
+  
+  | Cable Number | Purpose    | Color-A      | Color-B      |
+  |:------------:|------------|--------------|--------------|
+  |       1      | Transmit + | Green/White  | Orange/White |
+  |       2      | Transmit - | Green        | Orange       |
+  |       3      | Receive +  | Orange/White | Green/White  |
+  |       4      |            | Blue         | Blue         |
+  |       5      |            | Blue/White   | Blue/White   |
+  |       6      | Receive -  | Orange       | Green        |
+  |       7      |            | Brown/White  | Brown/White  |
+  |       8      |            | Brown        | Brown        |
+  
+  Crossover Cable swaps 12 and 36 on the opposite end
+  Crossover Cable Uses: 
+  - Router to Router
+  - Switch to Switch
+  - PC to PC
+  - PC to Router
+  
+  Straight Through Cable Uses:
+  - PC to Switch
+  - Switch to Router
+  
+  ## Coax Cabling
+  
+  Cable TV/Internet
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:36.840Z"
+updatedAt: "2017-11-17T20:58:36.840Z"

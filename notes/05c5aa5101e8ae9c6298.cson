@@ -1,0 +1,85 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "IPv4 Subnetting"
+content: '''
+  # IPv4 Subnetting
+  Classless Inter-Domain Routing (CIDR) Notation = /(Network Prefix)
+  
+  255 = 11111111
+  
+  ## Subnet Calculator
+  Networks: 2<sup>bits</sup>
+  Hosts per Network: 2<sup>bits-2</sup>
+  
+  | Bits | Networks | Hosts per Network |
+  |------|----------|-------------------|
+  | 0    | 1        | -                 |
+  | 1    | 2        | -                 |
+  | 2    | 4        | 2                 |
+  | 3    | 8        | 6                 |
+  | 4    | 16       | 14                |
+  | 5    | 32       | 30                |
+  | 6    | 64       | 62                |
+  | 7    | 128      | 126               |
+  | 8    | 256      | 254               |
+  | 9    | 512      | 510               |
+  | 10   | 1024     | 1022              |
+  
+  ![55-octet-values-subnet-masks.jpg](/:storage/fm0lacrtsjjrlik9.jpg)
+  ![IPv4-Subnetting.png](/:storage/u1458t82e8h93sor.png)
+  
+  Problem:
+  10.0.50.0/24 Needs 11 Networks, Needs 8 
+  | Labels               | Octet 1  | Octet 2  | Octet 3  | Octet 4  | Prefix | Result        |
+  |----------------------|----------|----------|----------|----------|--------|---------------|
+  | Network Address      | 00001010 | 00000000 | 00110010 | 00000000 | /24    | 10.0.50.0/24  |
+  | Given Subnet Mask    | 11111111 | 11111111 | 11111111 | 00000000 | /24    |      ---      |
+  | New Subnet Mask      | 11111111 | 11111111 | 11111111 | 11110000 | /28    |      ---      |
+  | Network 0 Address    | 00001010 | 00000000 | 00110010 | 00000000 | /28    | 10.0.50.0/28  |
+  | Network 0 Host First | 00001010 | 00000000 | 00110010 | 00000001 | /28    | 10.0.50.1/28  |
+  | Network 0 Host Last  | 00001010 | 00000000 | 00110010 | 00001110 | /28    | 10.0.50.14/28 |
+  | Network 0 Broadcast  | 00001010 | 00000000 | 00110010 | 00001111 | /28    | 10.0.50.15/28 |
+  | Network 1 Address    | 00001010 | 00000000 | 00110010 | 00010000 | /28    | 10.0.50.16/28 |
+  | Network 2 Address    | 00001010 | 00000000 | 00110010 | 00100000 | /28    | 10.0.50.32/28 |
+  | Network 3 Address    | 00001010 | 00000000 | 00110010 | 00110000 | /28    | 10.0.50.48/28 |
+  | Network 4 Address    | 00001010 | 00000000 | 00110010 | 01000000 | /28    | 10.0.50.64/28 |
+  
+  
+  ## Example Questions 
+  [Example Questions Site](http://www.subnettingquestions.com/)
+  
+  1. What mask can be applied so that the address 27.235.34.168 is a network address?
+  
+  Explanation: Convert the last few decimals to binary, and draw a line where the 0's line up.
+  Last Decimal 168 = 10101000 so 10101|000 = /29
+  
+  Answer: /29
+  
+  2. What mask can be applied so the address 27.235.34.168 is a host address?
+  
+  /28 and below = host address because of the subnet mask.
+  
+  3. What mask can be applied so the address 10.150.64.143 is a broadcast address?
+  
+  Convert the last few decimals to binary, and draw a line where the 1's line up.
+  Last Decimal 143 = 10001111 so 1000|1111 = /28
+  
+  Answer: /28 and above
+  
+  
+  4. Given a Class C Address how many /30 networks are available for use?
+  
+  Class C = /24 prefix.
+  /30 - /24 = 6 bits. Look up how many 6 bits gives us, or calculate  with 2<sup>bits</sup> or 2<sup>6</sup> in this case equals 64. 
+  
+  Answer: 64 /30 Networks in a Class C address
+  
+'''
+tags: [
+  "Subnetting"
+  "IPv4"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:15.070Z"
+updatedAt: "2017-11-17T20:58:15.070Z"

@@ -1,0 +1,20 @@
+type: "MARKDOWN_NOTE"
+folder: "59ca90aaaa6a99d8066a"
+title: "Useful IOS Commands"
+content: '''
+  # Useful IOS Commands
+  
+  `show running-config`
+  `show startup-config`
+  `show version`
+  `show flash`
+  `show ip interface brief`
+  `show interface fastethernet 0/0`
+  `no ip domain-lookup` (Turns off DNS lookup for unknown commands)
+  
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:33.929Z"
+updatedAt: "2017-11-17T20:58:33.929Z"

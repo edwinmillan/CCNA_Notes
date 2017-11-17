@@ -1,0 +1,117 @@
+type: "MARKDOWN_NOTE"
+folder: "59ca90aaaa6a99d8066a"
+title: "Router Configuration"
+content: '''
+  # Router Configuration
+  
+  
+  `enable` = privilege mode
+  `configure terminal` = global configuration mode
+  
+  ## First time configuring
+  1. Set the Hostname to *SomeHostname*
+  ```
+  configure terminal
+  hostname SomeHostname
+  ```
+  2. Set domain name to anything.local
+  ```
+  configure terminal
+  ip domain-name anything.local
+  ```
+  
+  3. Set MOTD and uses the # to delimit the beginning and end of the banner, including newlines.
+  ```
+  configure terminal
+  banner MOTD # Authorized Use Only!
+  Don't login to my router unless you're me! #
+  ``` 
+  
+  4. Setup credentials to console port when they `login`
+  ```
+  configure terminal
+  line console 0
+  password P@ssword123
+  login
+  ```
+  
+  5. Setup credentials to aux port when they `login`
+  ```
+  configure terminal
+  line aux 0
+  password P@ssword123
+  login
+  ```
+  
+  6. Put a password on `enable` (privilege mode) 
+  ```
+  configure terminal
+  enable secret EnableP@ssword123
+  ```
+  
+  7. Obsfugate cleartext passwords
+  ```
+  configure terminal
+  service password-encryption
+  ```
+  
+  8. Control the log interruption that pop up on console and aux terminal connections
+  ```
+  configure terminal
+  line console 0
+  logging synchronous
+  line aux 0
+  logging synchronous
+  ```
+  
+  9. Generate a cryptographic key, setup a user, and setup SSH for remote access
+  ```
+  configure terminal
+  crypto key generate rsa general-keys ### question pops up: 1024 or 2048 bits for modulus
+  ip ssh version 2
+  username someusername secret UserP@ssword123
+  line vty 0 4
+  transport input ssh
+  login local
+  logging synchronous
+  ```
+  
+  10. Setup an ip address on the interface (10.0.0.1/25)
+  ```
+  configure terminal
+  interface fastethernet 0/0
+  ip address 10.0.0.1 255.255.255.128
+  no shutdown
+  ```
+  
+  11. Write your running config to startup configuration
+  ```
+  copy running-config startup-config
+  ```
+  
+  ## IPv6
+  
+  ```
+  configure terminal
+  ipv6 unicast-routing
+  interface fastethernet 0/0
+  ipv6 address 2001:db8:4:a::1/64
+  interface fastethernet 0/1
+  ipv6 address 2001:db8:4:b::1/64
+  ```
+  
+  ## Erase config
+  ```
+  erase
+  ```
+  
+  ## Reload the Router
+  ```
+  reload
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:23.833Z"
+updatedAt: "2017-11-17T20:58:23.833Z"

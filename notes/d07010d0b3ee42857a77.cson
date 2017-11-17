@@ -1,0 +1,48 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "IPv6 Subnetting"
+content: '''
+  # IPv6 Subnetting
+  
+  ISP Obtains IPv6 from IANA regional registry 
+  - 2001:0DB8:0000:0000:0000:0000:0000:0000/32
+  - Short 2001:DB8::/32 
+  
+  Example: 
+  ISP has 5 customers to give networks. 
+  1. Section off last 64 for hosts: 
+      - 2001:0DB8:0000:0000:|*0000:0000:0000:0000*/32
+  2. Set it up as a /48 for customers to divide up:
+      - 2001:0DB8:**0000**:0000:|*0000:0000:0000:0000*/48
+  3. Count up to however many networks needed:
+      - 2001:0DB8:**0000**:0000:|*0000:0000:0000:0000*/48
+      - 2001:0DB8:**0001**:0000:|*0000:0000:0000:0000*/48
+      - 2001:0DB8:**0002**:0000:|*0000:0000:0000:0000*/48
+      - 2001:0DB8:**0003**:0000:|*0000:0000:0000:0000*/48
+      - 2001:0DB8:**0004**:0000:|*0000:0000:0000:0000*/48 
+  
+  To split up a /48 that an ISP has given you, try to split along the 4 bits in each hextet. This allows you to count.
+  
+  | Prefix | Networks |
+  |--------|----------|
+  | /48    | 65536    |
+  | /52    | 4096     |
+  | /56    | 256      |
+  | /60    | 16       |
+  | /64    | 0        |
+  
+  
+  /48 **2001:0DB8:0000**|:0000:: 
+  /52 **2001:0DB8:0000:0**|000::
+  /56 **2001:0DB8:0000:00**|00::
+  /60 **2001:0DB8:0000:000**|0::
+  /64 **2001:0DB8:0000:0000**|::
+'''
+tags: [
+  "Subnetting"
+  "IPv6"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:16.807Z"
+updatedAt: "2017-11-17T20:58:16.807Z"

@@ -1,0 +1,41 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "IPv4 Addressing"
+content: '''
+  # IPv4 Addressing
+  
+  ## Fundamentals
+  **Bit:** 
+  - 1 or a 0
+  
+  **Byte (Octet): 8 bits**
+  - 11001001
+  - Hex: 0xC9
+  
+  ## IPv4 Structure
+  32 bits long = 4 octets
+  Decimal: 192.167.10.10
+  Binary: 11000000 1010100 00001010 00001010
+  
+  ## Private IP addresses
+  | Start       | End             | Prefix |
+  |-------------|-----------------|--------|
+  | 10.0.0.0    | 10.255.255.255  | /8     |
+  | 172.16.0.0  | 172.31.255.255  | /12    |
+  | 192.168.0.0 | 192.168.255.255 | /16    |
+  
+  ## Subnet Classes
+  |         | Default subnet mask | Range                       |
+  |---------|---------------------|-----------------------------|
+  | Class A | 255.0.0.0 (/8)      | 1.0.0.0 – 126.255.255.255   |
+  | Class B | 255.255.0.0 (/16)   | 128.0.0.0 – 191.255.255.255 |
+  | Class C | 255.255.255.0 (/24) | 192.0.0.0 – 223.255.255.255 |
+'''
+tags: [
+  "IPv4"
+  "Addressing"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:10.890Z"
+updatedAt: "2017-11-17T20:58:10.890Z"

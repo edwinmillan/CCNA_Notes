@@ -1,0 +1,43 @@
+type: "MARKDOWN_NOTE"
+folder: "59ca90aaaa6a99d8066a"
+title: "Upgrading IOS"
+content: '''
+  # Upgrading IOS
+  
+  1. Check space on router's storage. In this case, the flash.
+  ```
+  show flash
+  ```
+  
+  2. If space is needed, you might need to remove the current image from flash
+  ``` 
+  delete flash:/filename.bin
+  ```
+  
+  3. Copy from TFTP Server hosting IOS file, filling out the ip information
+  ```
+  copy tftp flash
+  ```
+  
+  4. Set the new image file in the configuration
+  ```
+  configure terminal
+  boot system flash:/filename.bin
+  ```
+  
+  5. Save config and reload
+  ```
+  copy running-config startup-config
+  reload
+  ```
+  
+  6. Verify upgrade 
+  ```
+  show version
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:32.032Z"
+updatedAt: "2017-11-17T20:58:32.032Z"

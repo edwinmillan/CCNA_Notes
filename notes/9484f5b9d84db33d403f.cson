@@ -1,0 +1,70 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "Binary / Decimal / Hexadecimal"
+content: '''
+  # Binary / Decimal / Hexadecimal
+  
+  Conversion Table
+  | Binary | Decimal | Hexadecimal |
+  |--------|---------|-------------|
+  | 0000   | 0       | 0           |
+  | 0001   | 1       | 1           |
+  | 0010   | 2       | 2           |
+  | 0011   | 3       | 3           |
+  | 0100   | 4       | 4           |
+  | 0101   | 5       | 5           |
+  | 0110   | 6       | 6           |
+  | 0111   | 7       | 7           |
+  | 1000   | 8       | 8           |
+  | 1001   | 9       | 9           |
+  | 1010   | 10      | A           |
+  | 1011   | 11      | B           |
+  | 1100   | 12      | C           |
+  | 1101   | 13      | D           |
+  | 1110   | 14      | E           |
+  | 1111   | 15      | F           |
+  | 10000  | 16      | 10          |
+  
+  ## Binary Counting
+  Places go up by 2 ^ x
+  
+  Place Value in Binary
+  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+  |-----|----|----|----|---|---|---|---|
+  | 0   | 0  | 0  | 0  | 0 | 0 | 0 | 0 |
+  
+  ## Converting Binary to Decimal
+  To get decimal value, multiply the place value by the binary value.
+  
+  Example:
+  | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+  |-----|----|----|----|---|---|---|---|
+  | x   | x  | x  | x  | x | x | x | x |
+  | 0   | 0  | 1  | 0  | 1 | 0 | 0 | 0 |
+  
+  101000 = 40
+  (1x32) + (1x8) = 40
+  
+  ## Converting Decimal to Binary
+  Start with highest Binary placeholder, Can you subtract highest Binary placeholder and get a number that is greater than or equal to 0? Keep going through the placeholders
+  
+  Example: 210 -> Binary = ?
+  (Yes: 1) 210 - 128 (Highest placeholder) = 82
+  (Yes: 1) 82 - 64 (Next highest placeholder) = 18
+  (No: 0) 18 - 32
+  (Yes: 1) 18 - 16 = 2
+  (No: 0) 2 - 8
+  (No: 0) 2 - 4
+  (Yes: 1) 2 - 2 = 0
+  (No: 0) 0 - 1
+  
+  Answer: 11010010
+  
+'''
+tags: [
+  "Binary"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:18.739Z"
+updatedAt: "2017-11-17T20:58:18.739Z"

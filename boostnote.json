@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "key": "738cba2969dfdb159494",
+      "color": "#2BA5F7",
+      "name": "CCNA Network Layer Addressing"
+    },
+    {
+      "key": "59ca90aaaa6a99d8066a",
+      "color": "#3FD941",
+      "name": "CCNA Configuring Router"
+    },
+    {
+      "key": "71faee7512a1a7742253",
+      "color": "#FF8E00",
+      "name": "CCNA Network Layer and Ethernet Operation"
+    }
+  ],
+  "version": "1.0"
+}

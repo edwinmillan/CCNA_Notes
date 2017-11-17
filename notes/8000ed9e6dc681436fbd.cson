@@ -1,0 +1,38 @@
+type: "MARKDOWN_NOTE"
+folder: "738cba2969dfdb159494"
+title: "Variable Length Subnet Masking VLSM"
+content: '''
+  # Variable Length Subnet Masking VLSM
+  
+  Start top down but use the "hosts per network" and put the bits they match in the host section. Then move the subnet mask up.
+  
+  Example Question
+  
+  Given 13 networks, and provided their required hosts. Fill the Table out with the bits, network id w/ prefix, and mask. 
+  Start with 10.0.48.0/21
+  
+  | Hosts | Bits | Network ID (Prefix) | Mask            |
+  |-------|------|---------------------|-----------------|
+  | 300   | 9    | 10.0.48.0/23        | 255.255.254.0   |
+  | 200   | 8    | 10.0.50.0/24        | 255.255.255.0   |
+  | 200   | 8    | 10.0.51.0/24        | 255.255.255.0   |
+  | 150   | 8    | 10.0.52.0/24        | 255.255.255.0   |
+  | 125   | 7    | 10.0.53.0/25        | 255.255.255.128 |
+  | 100   | 7    | 10.0.53.128/25      | 255.255.255.128 |
+  | 75    | 7    | 10.0.54.0/25        | 255.255.255.128 |
+  | 25    | 5    | 10.0.54.128/27      | 255.255.255.224 |
+  | 2     | 2    | 10.0.54.160/30      | 255.255.255.252 |
+  | 2     | 2    | 10.0.54.164/30      | 255.255.255.252 |
+  | 2     | 2    | 10.0.54.168/30      | 255.255.255.252 |
+  | 2     | 2    | 10.0.54.172/30      | 255.255.255.252 |
+  | 2     | 2    | 10.0.54.176/30      | 255.255.255.252 |
+  
+'''
+tags: [
+  "Subnetting"
+  "IPv4"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:08.641Z"
+updatedAt: "2017-11-17T20:58:08.641Z"

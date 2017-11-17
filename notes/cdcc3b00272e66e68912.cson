@@ -1,0 +1,65 @@
+type: "MARKDOWN_NOTE"
+folder: "59ca90aaaa6a99d8066a"
+title: "Device Startup and Recovery"
+content: '''
+  # Device Startup and Recovery
+  
+  ## Configuration Register
+  
+  7th bit is the NVRAM Contents
+  
+  `0x2102` = 0010 0001 0|0|00 0010 = Load the contents of NVRAM, load startup config
+  `0x2142` = 0010 0001 0|1|00 0010 = Do not load the contents of NVRAM,  do not load startup config
+  
+  Last bit, is the boot field.
+  `0x2101` = 0010 0001 0000 |0001| = Boot based on the first file in flash
+  `0x2102` = 0010 0001 0000 |0010| = Boot based on the config file, otherwise load first file it finds in flash
+  
+  
+  ## Dealing with resetting a password
+  
+  1. Reload, enter break command, and work in ROMMON
+  2. Modify config register
+  ```
+  confreg 0x2142
+  ```
+  
+  3. Reload router
+  ```
+  reset
+  ```
+  
+  4. Enter the device, enter privileged mode, copy startup to running, and then update password
+  ```
+  enable
+  copy startup-config running-config
+  configure terminal
+  enable secret P@ssword123
+  exit
+  copy running-config startup-config
+  ```
+  
+  5. Reset the config register
+  ```
+  configure terminal
+  config-register 0x2102
+  exit
+  copy running-config startup-config
+  ```
+  
+  6. Run `no shutdown` all the interfaces since they will be shutdown by default
+  ```
+  configure terminal
+  interface fastethernet 0/0
+  no shutdown
+  interface fastethernet 0/1
+  no shutdown
+  exit
+  copy running-config startup-config
+  ```
+'''
+tags: []
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-17T20:58:30.147Z"
+updatedAt: "2017-11-17T20:58:30.147Z"
