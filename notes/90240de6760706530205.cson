@@ -53,6 +53,110 @@ content: '''
   ## Coax Cabling
   
   Cable TV/Internet
+  - RG-6
+  - F-type Connector
+  
+  Antenna Connections
+  - LMR-200 
+  - LMR-400
+  - LMR-900
+  
+  ## Fiber Optics
+  
+  ### Single Mode
+  - One Wavelength
+  - Long Distance
+  - Usually used to connect two buildings
+  
+  ### Multi-mode
+  - Multiple wavelengths
+  - Bounces around, shorter distance
+  - Usually used within a building
+  
+  | Laser Type | Wavelength    | Fiber       | Distance |
+  |------------|---------------|-------------|----------|
+  | LX         | 1270 - 1355nm | Single Mode | 70km     |
+  | SX         | 770 - 860nm   | Multi-Mode  | 0.5-1km  |
+  
+  ### Connector Types
+  - ST
+  - SC
+  - LC (Common with SFP's)
+  
+  ## Wireless Ethernet 802.11
+  
+  ### Channels
+  2.4GHz
+  - 3 Usable Channels (1, 6, 11)
+  5GHz
+  - Channels 52-140 Require DFS (Dynamic Frequency Selection)
+  
+  
+  # Data Link Layer Technologies
+  
+  ## Ethernet
+  - IEEE - 802.3
+  
+  ### Copper
+  - 10Base5 (10 Megabits per Second, Baseband Tech, Coax with stiff core)
+  - 10Base2 (Coax we're used to)
+  - 10BaseT/100BaseT/1000BaseT, T stands for Twisted 
+  
+  ### Fiber
+  - 1000Base-SX
+  - 1000Base-LX
+  - 10GBase-SR
+  - 10GBase-LR
+  
+  ## Wireless Ethernet Protocols
+  
+  ### 802.11a 
+  - 5GHz spectrum only
+  - 54 Mbps Bandwidth
+  - Initially Enterprise only due to price
+  
+  ### 802.11b
+  - 2.4GHz spectrum only
+  - 11 Mbps
+  - Initially for SOHO Use
+  
+  ### 802.11g
+  - 2.4GHz spectrum only
+  - 54 Mbps
+  - Enterprise/SOHO Use
+  
+  ### 802.11n
+  - 2.4 and 5 GHz
+  - 300 Mbps
+  - Uses MIMO (Multiple In Multiple Out)
+  - Enterprise/SOHO Use
+  
+  ### 802.11ac
+  - 5 GHz spectrum only
+  - 1.3 Gbps
+  - MIMO and beamforming ()
+  
+  # Other Protocols
+  
+  ### Digital Subscriber Line (DSL)
+  - Uses Phone Line
+  
+  ### Data Over Cable Service Interface Specification (DOCSIS)
+  - Uses Coax
+  
+  ### Satellite Internet
+  - High Latency
+  
+  
+  # Serial Communication Protocols
+  
+  ### Point to Point Protocol (PPP)
+  - Kinda slow
+  
+  ### High Level Data Link Control (HDLC)
+  - Cisco Only
+  
+  ### Frame Relay
 '''
 tags: [
   "Layer1"
@@ -60,4 +164,4 @@ tags: [
 isStarred: false
 isTrashed: false
 createdAt: "2017-11-17T20:58:36.840Z"
-updatedAt: "2017-11-17T21:16:33.350Z"
+updatedAt: "2017-11-20T15:40:10.693Z"

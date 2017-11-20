@@ -1,0 +1,38 @@
+type: "MARKDOWN_NOTE"
+folder: "71faee7512a1a7742253"
+title: "Data Link Layer"
+content: '''
+  # Data Link Layer
+  
+  ## IEEE 802.3 - Ethernet II
+  Founded by:
+  - DEC (Digital Equipment Corporation)
+  - Xerox
+  - Intel
+  
+  Format of Ethernet Frame established with Ethernet II
+  
+  ## CSMA/CD (Carrier Sense Multiple Access with Collision Detection)
+  
+  ### Collision 
+  State where multiple devices send a message at the same time within a collision domain.
+  
+  ## Link Speed
+  
+  ### Half Duplex
+  - One device communicates at a time
+  - "Walkie Talkie"
+  
+  ### Full Duplex
+  - Two devices communicate at the same time
+  - "Telephone"
+  
+  ### 
+'''
+tags: [
+  "Layer2"
+]
+isStarred: false
+isTrashed: false
+createdAt: "2017-11-20T14:33:34.900Z"
+updatedAt: "2017-11-20T17:06:00.034Z"
